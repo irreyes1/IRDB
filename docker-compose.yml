@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  irdb-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      # Database config (optional, can be set in UI)
+      # - DB_HOST=10.118.249.195
+      # - DB_USER=etluserGenesis
+      # - DB_PASSWORD=your_password
+      # - DB_NAME=ETLDB
